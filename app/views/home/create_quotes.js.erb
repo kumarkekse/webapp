@@ -1,0 +1,7 @@
+$('#quote-title').text("<%= @quote.title%>");
+$('#quote-content').html("<%= strip_tags(@quote.content).strip%>");
+if ("<%= @quote.source%>" != "") {
+  $('#quote-source').html("Source:"+"<%= @quote.source%>");    
+} else {
+  $('#quote-source').html('');  
+}

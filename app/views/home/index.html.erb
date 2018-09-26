@@ -1,0 +1,20 @@
+
+<div class="left_heading">
+<h1 class=heading>Quotes on design</h1>
+</div>
+<div class="right_btn">
+<%= link_to "Get another random design quote", create_quotes_path, id: "get-another-quote-button", type: "button", class: "btn btn-success btn-secondary", remote: true%>
+</div>
+<div class="center_content">
+  <div id="quote-title">
+    <%= @quote.title.upcase %>
+  </div>
+  <div id="quote-content">
+    <%= strip_tags(@quote.content) %>
+  </div>
+</div>
+<div class="footer">
+  <div id="quote-source">
+    <%= @quote.source %>
+  </div>
+</div>
